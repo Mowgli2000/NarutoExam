@@ -1,0 +1,84 @@
+@page "/favorites"
+@using narutoAPI.Data
+@using CharacterServices.Services
+@inject CharacterService CharacterService
+
+@if (favoritesList.Count == 0)
+{
+    <p>No favorites yet</p>
+}
+else
+{
+    <ul>
+    @foreach (var character in favoritesList)
+    {
+        <li>
+            <div class="rating">
+                @if (1 <= character.rating){
+                    <button @onclick="() => ApplyRating(character, 1)">♥</button>
+                }else {
+                    <button @onclick="() => ApplyRating(character, 1)">♡</button>
+                }
+                @if (2 <= character.rating){
+                    <button @onclick="() => ApplyRating(character, 2)">♥</button>
+                }else {
+                    <button @onclick="() => ApplyRating(character, 2)">♡</button>
+                }
+                @if (3 <= character.rating){
+                    <button @onclick="() => ApplyRating(character, 3)">♥</button>
+                }else {
+                    <button @onclick="() => ApplyRating(character, 3)">♡</button>
+                }
+                @if (4 <= character.rating){
+                    <button @onclick="() => ApplyRating(character, 4)">♥</button>
+                }else {
+                    <button @onclick="() => ApplyRating(character, 4)">♡</button>
+                }
+                @if (5 <= character.rating){
+                    <button @onclick="() => ApplyRating(character, 5)">♥</button>
+                }else {
+                    <button @onclick="() => ApplyRating(character, 5)">♡</button>
+                }
+            </div>
+            <p>@character.name</p>
+            @if (character.images != null && character.images.Count > 0)
+            {
+                <img src="@character.images[0]" alt="@character.name" />
+            }
+            @if (character.jutsu != null)
+            {
+                @foreach (var jutsu in character.jutsu)
+                {
+                    @if (jutsu.Length < 50){
+                        <p>@jutsu</p>
+                    }
+                }
+            }
+            <p></p>
+            <button @onclick="() => ToggleFavorite(character)">Remove Favorites</button>
+            
+        </li>
+    }
+    </ul>
+}
+
+@code {
+    private List<Character> favoritesList;
+
+    protected override async Task OnInitializedAsync()
+    {
+        favoritesList = CharacterService.GetFavorites();
+    }
+
+    private void ToggleFavorite(Character character)
+    {
+        CharacterService.ToggleFavorite(character);
+        StateHasChanged();
+    }
+
+    private void ApplyRating(Character character, int rating)
+    {
+        CharacterService.Rate(character, rating);
+        StateHasChanged();
+    }
+}

@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\rapha\\Desktop\\IFOSUP\\2eme\\Csharp\\NarutoExam\\narutoAPI\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\rapha\\Desktop\\IFOSUP\\2eme\\Csharp\\NarutoExam\\narutoAPI\\obj\\Debug\\net8.0\\compressed\\swsae67mar.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\rapha\\Desktop\\IFOSUP\\2eme\\Csharp\\NarutoExam\\narutoAPI\\obj\\Debug\\net8.0\\scopedcss\\bundle\\narutoAPI.styles.css",
+      "PackagePath": "staticwebassets\\narutoAPI.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\rapha\\Desktop\\IFOSUP\\2eme\\Csharp\\NarutoExam\\narutoAPI\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\rapha\\Desktop\\IFOSUP\\2eme\\Csharp\\NarutoExam\\narutoAPI\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rapha\\Desktop\\IFOSUP\\2eme\\Csharp\\NarutoExam\\narutoAPI\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rapha\\Desktop\\IFOSUP\\2eme\\Csharp\\NarutoExam\\narutoAPI\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\rapha\\Desktop\\IFOSUP\\2eme\\Csharp\\NarutoExam\\narutoAPI\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\rapha\\Desktop\\IFOSUP\\2eme\\Csharp\\NarutoExam\\narutoAPI\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.narutoAPI.props",
+      "PackagePath": "build\\narutoAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.narutoAPI.props",
+      "PackagePath": "buildMultiTargeting\\narutoAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.narutoAPI.props",
+      "PackagePath": "buildTransitive\\narutoAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.narutoAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

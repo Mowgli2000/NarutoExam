@@ -1,0 +1,69 @@
+﻿@page "/"
+@using narutoAPI.Data
+@using CharacterServices.Services
+@inject CharacterService CharacterService
+
+<PageTitle>Home</PageTitle>
+<html>
+    <head>
+        <link href="css/app.css" rel="stylesheet" />
+    </head>
+
+    <body>
+    <h1>Naruto Characters</h1>
+
+    @if (charList == null)
+    {
+        <p>Loading...</p>
+    }
+    else
+    {
+        <ul>
+        @foreach (var character in charList)
+        {
+            <li>
+                <p>@character.name</p>
+                @if (character.images != null && character.images.Count > 0)
+                {
+                    <img src="@character.images[0]" alt="@character.name" />
+                }
+                @if (character.jutsu != null)
+                {
+                    @foreach (string jutsu in character.jutsu)
+                    {
+                        @if (jutsu.Length < 50){
+                            <p>@jutsu</p>
+                        }
+                    }
+                }
+                <p></p>
+                @if (CharacterService.IsFavorite(character))
+                {
+                    <button @onclick="() => ToggleFavorite(character)">Remove Favorites</button>
+                } else {
+                    <button @onclick="() => ToggleFavorite(character)">Add Favorites</button>
+                }
+	            
+            </li>
+        }
+        </ul>
+    }
+
+    @code {
+        private List<Character> charList;
+
+        protected override async Task OnInitializedAsync()
+        {
+            charList = await CharacterService.GetCharInfo();
+        }
+
+        private void ToggleFavorite(Character character)
+        {
+            CharacterService.ToggleFavorite(character);
+            StateHasChanged();
+        }
+    }
+
+
+    </body>
+</html>
